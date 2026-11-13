@@ -1,0 +1,18 @@
+# Evaluation configuration for the Meridian retrieval experiments.
+parameters:
+  - name: top_k
+    type: int
+    default: 32
+    description: Number of passages retrieved per query.
+  - name: router_temperature
+    type: float
+    default: 0.7
+    description: Softmax temperature used when routing tokens to experts.
+  - name: candidate_ids
+    type: List[int]
+    default: []
+    description: Explicit passage ids to force into the candidate pool.
+  - name: rerank_scores
+    type: List[List[float]]
+    default: null
+    description: Optional precomputed reranking scores for each candidate.
